@@ -2,4 +2,10 @@
 <resources>
     <string name="hello_message">Hola Amigos!</string>
     <string name="button_text">Yo soy un botón!</string>
+    <string name="title_activity_login">LoginActividad</string>
+    <string name="login">Nombre de usuario</string>
+    <string name="login_name">Nombre de usuario</string>
+    <string name="login_password">Contraseña</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="switch_text">Habilitar algo</string>
 </resources>
