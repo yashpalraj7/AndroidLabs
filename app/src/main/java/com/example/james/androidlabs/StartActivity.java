@@ -68,7 +68,7 @@ public class StartActivity extends AppCompatActivity {
             String messagePassed = data.getStringExtra("Response");
 
             Toast toast = Toast.makeText(this , messagePassed, Toast.LENGTH_LONG);
-            toast.show(); 
+            toast.show();
 
         }
     }
