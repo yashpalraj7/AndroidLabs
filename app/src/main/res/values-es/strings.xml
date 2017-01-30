@@ -12,4 +12,6 @@
     <string name="cancel">No?</string>
     <string name="ok">Sí?</string>
     <string name="dialog_title">Regresa a StartActivity</string>
+    <string name="start_chat">Comenzar Chat</string>
+    <string name="dialog_message">¿Quieres regresar?</string>
 </resources>

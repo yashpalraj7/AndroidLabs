@@ -54,7 +54,7 @@ public class ListItemsActivity extends AppCompatActivity {
                 }
 
 
-                Toast toast = Toast.makeText(ListItemsActivity.super.getApplicationContext(), text, duration); //this is the ListActivity
+                Toast toast = Toast.makeText(ListItemsActivity.this, text, duration); //this is the ListActivity
                 toast.show(); //display your message box
 
             }
