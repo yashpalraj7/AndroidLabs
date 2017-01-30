@@ -10,7 +10,7 @@
     <string name="switch_text">Enable Something</string>
     <string name="login_button">Login</string>
     <string name="pref_login"></string>
-    <string name="dialog_message"></string>
+    <string name="dialog_message">Would you like to go back?</string>
     <string name="dialog_title">Go back to StartActivity</string>
     <string name="ok">Yes?</string>
     <string name="cancel">No?</string>

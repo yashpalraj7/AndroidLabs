@@ -19,7 +19,8 @@
         android:id="@+id/imageButton"
         android:background="@android:drawable/btn_star_big_on"
         android:layout_columnWeight="1"
-        android:layout_gravity="fill"/>
+        android:layout_gravity="fill"
+        style="@android:style/Widget.DeviceDefault.ImageButton" />
 
     <Switch
         android:text="@string/switch_text"
