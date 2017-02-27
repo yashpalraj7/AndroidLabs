@@ -1,6 +1,11 @@
 package com.example.james.androidlabs;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteCursorDriver;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteQuery;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -23,13 +28,36 @@ public class ChatWindow extends AppCompatActivity {
     private ListView listView;
     private Button sendButton;
     private EditText messageText;
+    private ChatDatabaseHelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_chat_window);
         messages = new ArrayList<String>();
         listView = (ListView) findViewById(R.id.chat_listView);
+
+        //DB STUFF
+        dbHelper = new ChatDatabaseHelper(getApplicationContext());
+        final SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        Cursor c = db.query(false, "CHAT", new String[]{"KEY_Message"},null,null,null,null,null,null);
+        String msg;
+
+        c.moveToFirst();
+        while(!c.isAfterLast()) {
+            msg = c.getString(c.getColumnIndex((dbHelper.KEY_MESSAGE)));
+            messages.add(msg);
+            Log.i(ACTIVITY_NAME, "SQL MESSAGE " + msg);
+            c.moveToNext();
+        }
+        Log.i(ACTIVITY_NAME, "Cursor's column count = " + c.getColumnCount());
+
+        for(int i = 0; i < c.getColumnCount(); i++) {
+            Log.i(ACTIVITY_NAME, c.getColumnName(i));
+        }
+
 
         messageText = (EditText) findViewById(R.id.msg_text);
 
@@ -41,13 +69,26 @@ public class ChatWindow extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Log.i(ACTIVITY_NAME, "clicked send button");
-                messages.add(messageText.getText().toString());
+                String msgText = messageText.getText().toString();
+
+                ContentValues cValues = new ContentValues();
+                cValues.put(dbHelper.KEY_MESSAGE, msgText);
+                db.insert(dbHelper.TABLE_NAME, "NullPlaceHolder", cValues);
+
+                messages.add(msgText);
                 messageAdapter.notifyDataSetChanged();
                 messageText.setText("");
 
             }
         });
 
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        dbHelper.close();
 
     }
 

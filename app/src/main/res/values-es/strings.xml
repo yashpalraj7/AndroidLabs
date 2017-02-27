@@ -14,7 +14,6 @@
     <string name="dialog_title">Regresa a StartActivity</string>
     <string name="start_chat">Comenzar Chat</string>
     <string name="dialog_message">¿Quieres regresar?</string>
-    <string name="dialog_message">Quieres regresar?</string>
-    <string name="start_chat">Comenzar Chat</string>
     <string name="send_button">Enviar</string>
+    <string name="app_name">AndroidLabs</string>
 </resources>
