@@ -33,5 +33,14 @@
         android:layout_marginTop="24dp"
         android:id="@+id/start_chat" />
 
-        />
+    <Button
+        android:text="@string/weatherButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/weatherButton"
+        android:layout_marginTop="26dp"
+        android:layout_below="@+id/start_chat"
+        android:layout_alignParentStart="true" />
+
+    />
 </RelativeLayout>
