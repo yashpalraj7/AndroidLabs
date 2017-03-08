@@ -182,15 +182,15 @@ public class WeatherForecast extends AppCompatActivity {
             super.onPostExecute(s);
 
             TextView minTempView = (TextView) findViewById(R.id.minTemp);
-            minTempView.setText("Min: " + minTemp);
+            minTempView.setText("Min: " + minTemp + "°C");
             minTempView.setVisibility(View.VISIBLE);
 
             TextView maxTempView = (TextView) findViewById(R.id.maxTemp);
-            maxTempView.setText("Max: " + maxTemp);
+            maxTempView.setText("Max: " + maxTemp + "°C");
             maxTempView.setVisibility(View.VISIBLE);
 
             TextView currentTempView = (TextView) findViewById(R.id.currentTemp);
-            currentTempView.setText("Current Temperature: " + currentTemp);
+            currentTempView.setText("Current Temperature: " + currentTemp +"°C");
             currentTempView.setVisibility(View.VISIBLE);
 
             ImageView weatherView = (ImageView) findViewById(R.id.imageView3);
