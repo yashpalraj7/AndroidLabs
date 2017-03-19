@@ -17,4 +17,10 @@
     <string name="start_chat">Start Chat</string>
     <string name="send_button">Send</string>
     <string name="weatherButton">Weather</string>
+    <string name="title_activity_test_toolbar">TestToolbar</string>
+    <string name="toolbarButton">Test Toolbar</string>
+    <string name="robot_dialog">Do you want to go back?</string>
+    <string name="robot_ok">Yes please!</string>
+    <string name="robot_cancel">No thanks!</string>
+    <string name="new_message">Enter a message</string>
 </resources>
