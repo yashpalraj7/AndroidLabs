@@ -23,4 +23,5 @@
     <string name="robot_ok">Yes please!</string>
     <string name="robot_cancel">No thanks!</string>
     <string name="new_message">Enter a message</string>
+    <string name="deleteButton">Delete this message</string>
 </resources>
